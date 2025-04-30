@@ -57,3 +57,30 @@ asistente:
 * Ejecuta el instalador 🔥
 
 * Finaliza la instalación 💯
+
+### Configuración de Git 🛠️
+
+Para hacer que tus commits se asocien a tu nombre y aparezca correctamente tu
+avatar en la plataforma de GitHub, necesitamos realizar la siguiente configuración.
+
+
+1. Configura tu nombre 😀
+    ```
+    git config --global user.name "<tu nombre>"
+    ```
+2. Configura tu correo electronico ✉️
+    ```
+    git config --global user.email "<tu email>"
+    ```
+📌**NOTA**: El correo electronico tiene que ser el mismo con el que estas registrado en Github
+
+**Otras configuraciones adicionales ⚙️** 
+
+* Para comprobar nuestra configuración de git ejecutamos el siguiente comando
+    ```
+    git config --list
+    ```
+* Si necesitamos ayuda y mas opciones de configuración 
+    ```
+    git config --help
+    ```
