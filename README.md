@@ -214,9 +214,29 @@ El comando git add en Git se usa para agregar archivos al área de preparación.
     ```
     git log --oneline
     ```
-
+* ✨Al ejecutar el comando git log --oneline nos muestra esto
+    ```
+    23a97fc (HEAD -> main, origin/main) Add: Sección States y commits
+    b6483db Add:Inicializar un repositorio y subirlo a Github
+    e98ddd5 Add:Configuración de Git
+    0cc4583 Add:Instalación de git en Linux/MacOS/Windows
+    88eb6d0 Add:Introdicción a Git
+    8f20b19 Add:Creación del repositorio
+    ```
 **Git status**
 * 🔥 Este comando lo utilizamos para ver el estado actual del repositorio, es decir, qué archivos han cambiado, cuáles están listos para hacer commit y cuáles no.
     ```
     git status
+    ```
+* ✨Al ejecutar el comando nos muestra esto:
+    ```
+    On branch main
+    Your branch is up to date with 'origin/main'.
+
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+    no changes added to commit (use "git add" and/or "git commit -a")
     ```
