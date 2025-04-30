@@ -84,3 +84,56 @@ avatar en la plataforma de GitHub, necesitamos realizar la siguiente configuraci
     ```
     git config --help
     ```
+
+### Inicializar un repositorio Git desde cero y subirlo a GitHub 🐱
+
+**➊ Creamos nuestro archivo README.md**
+
+* Este archivo contendra toda la información sobre nuestro proyecto.
+    ```
+    echo "# Curso-Git-Github-SCESI2025" >> README.md
+    ```
+**➋ Inicializar un repositorio**
+
+ * Inicializamos un repositorio Git vacío en tu nuestra carpeta actual.
+    ```
+    git init
+    ```
+Con eso ya tenemos inicializado nuestro repositorio pero solamente de forma local.
+
+**➌ Agregar el archivo**
+
+* Agregamos nuestro archivo README.md al área de preparación para que se pueda subir a Github 
+    ```
+    git add README.md
+    ```
+
+**➍ Commit inicial**
+
+* Creamos nuestro primer commit para que se guarden los cambios del README.md
+    ```
+    git commit -m "first commit"
+    ```
+
+**➎ Cambio de nombre de la rama**
+
+* Cambiamos el nombre de nuestra rama a main ya que inicialmente esta con Master
+    ```
+    git branch -M main
+    ```
+
+**➏ Conexión del repositorio local con el remoto**
+
+* Conectamos nuestro repositorio local con el remoto con la url que nos proporciona Github 
+    ```
+    git remote add origin https://github.com/TuNombreDeGithub/Curso-Git-Github-SCESI2025.git
+    ```
+
+**➐ Envio del commit a Github**
+
+* Enviamos el commit inicial que realizamos a la rama main, el -u vincula nuestra rama local con la rama remota.
+    ```
+    git push -u origin main
+    ```
+
+Listo y con esos 7 pasos ya tenemos nuestro repositorio Git Inicializado y subido a Github 😎
