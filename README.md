@@ -190,7 +190,7 @@ commit.
 
 ### Otros comandos basicos de Git 💯
 
-**Git add** 
+**Usando git add 👨‍💻** 
 
 El comando git add en Git se usa para agregar archivos al área de preparación. Esto significa que estás indicando qué cambios quieres incluir en el próximo commit.
 
@@ -204,7 +204,7 @@ El comando git add en Git se usa para agregar archivos al área de preparación.
     git add .
     ```
 
-**Git log**
+**Usando git log 👨‍💻**
 
 * ⭐**Primera opción:** Con git log podemos ver el lista de todos los commits realizados cronologicamente.
     ```
@@ -223,7 +223,7 @@ El comando git add en Git se usa para agregar archivos al área de preparación.
     88eb6d0 Add:Introdicción a Git
     8f20b19 Add:Creación del repositorio
     ```
-**Git status**
+**Usando git status 👨‍💻**
 * 🔥 Este comando lo utilizamos para ver el estado actual del repositorio, es decir, qué archivos han cambiado, cuáles están listos para hacer commit y cuáles no.
     ```
     git status
