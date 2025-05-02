@@ -15,6 +15,7 @@
 ### ¿Qué es Git? 🤔
 Git es un sistema distribuido de control de versiones, gratuito y de código abierto bajo licencia GPLv2. Fue diseñado originalmente por Linus Torvalds12, el creador de Linux.
 Git, al ser un sistema distribuido, aloja una copia completa del repositorio en cada máquina local que está trabajando en el código.
+
 ![git](img/git.png)
 
 ### Instalación Git
@@ -66,10 +67,12 @@ avatar en la plataforma de GitHub, necesitamos realizar la siguiente configuraci
 
 
 1. Configura tu nombre 😀
+
     ```
     git config --global user.name "<tu nombre>"
     ```
 2. Configura tu correo electronico ✉️
+
     ```
     git config --global user.email "<tu email>"
     ```
@@ -78,10 +81,12 @@ avatar en la plataforma de GitHub, necesitamos realizar la siguiente configuraci
 **Otras configuraciones adicionales ⚙️** 
 
 * Para comprobar nuestra configuración de git ejecutamos el siguiente comando
+
     ```
     git config --list
     ```
 * Si necesitamos ayuda y mas opciones de configuración 
+
     ```
     git config --help
     ```
@@ -91,12 +96,14 @@ avatar en la plataforma de GitHub, necesitamos realizar la siguiente configuraci
 **➊ Creamos nuestro archivo README.md**
 
 * Este archivo contendra toda la información sobre nuestro proyecto.
+
     ```
     echo "# Curso-Git-Github-SCESI2025" >> README.md
     ```
 **➋ Inicializar un repositorio**
 
  * Inicializamos un repositorio Git vacío en tu nuestra carpeta actual.
+
     ```
     git init
     ```
@@ -104,7 +111,8 @@ Con eso ya tenemos inicializado nuestro repositorio pero solamente de forma loca
 
 **➌ Agregar el archivo**
 
-* Agregamos nuestro archivo README.md al área de preparación para que se pueda subir a Github 
+* Agregamos nuestro archivo README.md al área de preparación para que se pueda subir a Github.
+
     ```
     git add README.md
     ```
@@ -112,6 +120,7 @@ Con eso ya tenemos inicializado nuestro repositorio pero solamente de forma loca
 **➍ Commit inicial**
 
 * Creamos nuestro primer commit para que se guarden los cambios del README.md
+
     ```
     git commit -m "first commit"
     ```
@@ -119,6 +128,7 @@ Con eso ya tenemos inicializado nuestro repositorio pero solamente de forma loca
 **➎ Cambio de nombre de la rama**
 
 * Cambiamos el nombre de nuestra rama a main ya que inicialmente esta con Master
+
     ```
     git branch -M main
     ```
@@ -126,6 +136,7 @@ Con eso ya tenemos inicializado nuestro repositorio pero solamente de forma loca
 **➏ Conexión del repositorio local con el remoto**
 
 * Conectamos nuestro repositorio local con el remoto con la url que nos proporciona Github 
+
     ```
     git remote add origin https://github.com/TuNombreDeGithub/Curso-Git-Github-SCESI2025.git
     ```
@@ -133,6 +144,7 @@ Con eso ya tenemos inicializado nuestro repositorio pero solamente de forma loca
 **➐ Envio del commit a Github**
 
 * Enviamos el commit inicial que realizamos a la rama main, el -u vincula nuestra rama local con la rama remota.
+
     ```
     git push -u origin main
     ```
@@ -168,12 +180,14 @@ estado de todos los archivos de tu repositorio en el momento en que se hizo y ca
 
 **¿Cómo puedo hacer un commit?**
 1. Si quieres guardar los cambios que tienes en el área de staging, puedes hacer un commit con el siguiente comando:
+
     ```
     git commit
     ```
 
 2. Si quieres añadir directamente un mensaje sin abrir el editor, puedes usar el
 parámetro -m o --message:
+
     ```
     git commit -m "Add new search feature"
     ```
@@ -207,14 +221,17 @@ El comando git add en Git se usa para agregar archivos al área de preparación.
 **Usando git log 👨‍💻**
 
 * ⭐**Primera opción:** Con git log podemos ver el lista de todos los commits realizados cronologicamente.
+
     ```
     git log
     ```
 * 🙀**Segunda opción:** Para mostrar los commit en una forma mas compacta o de una sola linea utilizamos el siguiente comando
+
     ```
     git log --oneline
     ```
 * ✨Al ejecutar el comando git log --oneline nos muestra esto
+
     ```
     23a97fc (HEAD -> main, origin/main) Add: Sección States y commits
     b6483db Add:Inicializar un repositorio y subirlo a Github
@@ -225,10 +242,12 @@ El comando git add en Git se usa para agregar archivos al área de preparación.
     ```
 **Usando git status 👨‍💻**
 * 🔥 Este comando lo utilizamos para ver el estado actual del repositorio, es decir, qué archivos han cambiado, cuáles están listos para hacer commit y cuáles no.
+
     ```
     git status
     ```
 * ✨Al ejecutar el comando nos muestra esto:
+
     ```
     On branch main
     Your branch is up to date with 'origin/main'.
@@ -265,10 +284,12 @@ El comando **git branch** nos permite crear, listar, eliminar y renombrar ramas,
 * **Paso 1:** Ingresamos a nuestra terminal de Visual Studio Code o con la que te sientas mas comodo.
 
 * **Paso 2:** Creamos la rama mi-primera-rama con el siguiente comando.
+
     ```
     git branch mi-primera-rama 
     ```
 * **Paso 3:** Verificamos que se creo la rama con el siguiente comando.
+
     ```
     git branch 
     ```
@@ -277,16 +298,19 @@ Como podemos ver ya tenemos nuestra nueva rama creada 😲
 ![git](img/creacion_rama.png)
 
 * **Paso 4:** Para cambiarnos a la rama que creamos utilizamos el comando git switch con el nombre de la rama creada.
+
     ```
     git switch mi-primera-rama
     ```
-Lito ya estamos en la rama mi-primera-rama que creamos 😁
+Listo ya estamos en la rama mi-primera-rama que creamos 😁
 
 ![git](img/cambiar_rama.png)
 
-* **Dato curioso:**Si queremos simplificar los pasos podemos crear nuestra rama y cambiarnos a ella al mismo tiempo 😱
+* **Dato curioso:** Si queremos simplificar los pasos podemos crear nuestra rama y cambiarnos a ella al mismo tiempo 😱
+
     ```
     git switch -c mi-segunda-rama
     ```
 Listo, con el comando git switch -c con el nombre de nuestra rama por delante podemos crear la rama y cambiarnos a ella 💯
+
 ![git](img/creacion_rama_switch.png)
