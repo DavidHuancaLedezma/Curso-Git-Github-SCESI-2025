@@ -328,6 +328,7 @@ en la nueva rama se asimila en otra.
 * **📌 Nota:** Aunque normalmente este tipo de fusión ocurre de una rama a la rama principal, debes tener en cuenta que en realidad podemos fusionar una rama con cualquier otra rama.
 
 **Usando git merge ✍️**
+
 Este comando nos permite incorporar los cambios de una rama a la rama en la que nos encontramos en ese momento. Por ejemplo, si estamos actualmente en la rama
 main y hacemos un git merge my-branch haremos que la rama main incorporé y fusione los cambios que había en la rama my-branch.
 
@@ -356,6 +357,7 @@ Listo, si ahora ejecutamos un git log veremos que el último commit incluye la p
 Al ejecutar el comando git merge, se crea un nuevo commit que incluye todos los cambios de la rama de origen a la rama en la que nos encontramos ahora.
 
 **Modificando el mensaje de commit 🚀**
+
 Al ejecutar el git merge, Git nos ha creado un commit y lo ha grabado. Sin embargo, si queremos evitar esto. Tenemos dos opciones para que no lo haga y, así, modificar el mensaje del commit
 
 1. Abre el editor antes de hacer el commit
@@ -373,6 +375,7 @@ Al ejecutar el git merge, Git nos ha creado un commit y lo ha grabado. Sin embar
 Aunque puede ser útil en algunos casos muy concretos lo cierto es que lo normal es simplemente dejar que Git haga el commit automáticamente. ✅
 
 ### Eliminando ramas 🗑️
+
 Después de fusionar una rama en otra rama tenemos que eliminarla para tener limpio nuestro espacio de trabajo y por que son buenas practicas.
 
 * Borramos la rama llamada "mi-primera-rama"
@@ -417,4 +420,21 @@ Un conflicto es una situación en la que Git no es capaz de determinar qué camb
 ![git](img/conflicto.png)
 
 Dada la naturaleza de sistema distribuido, es normal que a veces ocurran conflictos al intentar fusionar dos ramas en Git. ¿Cómo iba a saber Git qué cambio es más importante que otro?
+
+**Solucionando conflictos 🔧**
+
+1. Primeramente localizamos nuestro archivo que tiene conflictos, nos mostrara algo como esto:
+
+    ```
+    <<<<<<< HEAD Marca el inicio de los cambios que existe en tu rama actual.
+    ======= Es el separador entre las dos versiones de codigo en conflicto.
+    >>>>>>> Marca el final de los cambios provenientes de la otra rama que intentamos fusionar.
+    ```
+
+2. Aquí tenemos que decidir con que cambios quedarnos, con los cambios de nuestra rama actual o con los cambios provenientes de la otra rama, tambien podemos convinar ambos.
+
+**📌 Nota:** Una vez que escogemos con que cambios quedarnos tenemos que eliminar los marcadores **(<<<<<<<, =======, >>>>>>>)**.
+
+
+
 
