@@ -240,3 +240,53 @@ El comando git add en Git se usa para agregar archivos al área de preparación.
 
     no changes added to commit (use "git add" and/or "git commit -a")
     ```
+## Ramas, merge y conflictos
+
+### ¿Que es una rama? 🌿
+Una rama es simplemente una versión de la colección de directorios y archivos del repositorio. Cada vez que se crea una nueva rama, **se crea una copia de la colección de archivos actual**.
+A su vez, a **partir de esta rama puedes crear más ramas**.
+
+![git](img/ramas.png)
+
+### ¿Para que sirven las ramas? 🤔
+
+En pocas palabras una rama **sirve para aislar el trabajo de cada persona** y que, una vez concluido, se pueda integrar en el tronco de nuestro repositorio que será, dicho de otro modo, la rama principal.
+
+### ¿Qué representa la rama master o la rama main?
+
+La rama master es la rama principal de un repositorio y normalmente se crea al iniciar un repositorio. **El hecho que se llame master no es obligatorio** y en realidad responde a una razón histórica. Simplemente siempre se le ha llamado así.
+
+En la actualidad servicios como GitHub o GitLab **recomiendan que la rama principal sea llamada main** para evitar connotaciones racistas. 😅
+
+### Creando nuestra primera rama 🌱
+
+El comando **git branch** nos permite crear, listar, eliminar y renombrar ramas, ahora veremos los pasos para crear nuestra primera rama.
+
+* **Paso 1:** Ingresamos a nuestra terminal de Visual Studio Code o con la que te sientas mas comodo.
+
+* **Paso 2:** Creamos la rama mi-primera-rama con el siguiente comando.
+    ```
+    git branch mi-primera-rama 
+    ```
+* **Paso 3:** Verificamos que se creo la rama con el siguiente comando.
+    ```
+    git branch 
+    ```
+Como podemos ver ya tenemos nuestra nueva rama creada 😲
+
+![git](img/creacion_rama.png)
+
+* **Paso 4:** Para cambiarnos a la rama que creamos utilizamos el comando git switch con el nombre de la rama creada.
+    ```
+    git switch mi-primera-rama
+    ```
+Lito ya estamos en la rama mi-primera-rama que creamos 😁
+
+![git](img/cambiar_rama.png)
+
+* **Dato curioso:**Si queremos simplificar los pasos podemos crear nuestra rama y cambiarnos a ella al mismo tiempo 😱
+    ```
+    git switch -c mi-segunda-rama
+    ```
+Listo, con el comando git switch -c con el nombre de nuestra rama por delante podemos crear la rama y cambiarnos a ella 💯
+![git](img/creacion_rama_switch.png)
