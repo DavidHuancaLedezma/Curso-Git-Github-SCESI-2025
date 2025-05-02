@@ -431,10 +431,21 @@ Dada la naturaleza de sistema distribuido, es normal que a veces ocurran conflic
     >>>>>>> Marca el final de los cambios provenientes de la otra rama que intentamos fusionar.
     ```
 
-2. Aquí tenemos que decidir con que cambios quedarnos, con los cambios de nuestra rama actual o con los cambios provenientes de la otra rama, tambien podemos convinar ambos.
+2. Aquí tenemos que decidir con que cambios quedarnos, con los cambios de nuestra rama actual o con los cambios provenientes de la otra rama, tambien podemos conbinar ambos.
 
 **📌 Nota:** Una vez que escogemos con que cambios quedarnos tenemos que eliminar los marcadores **(<<<<<<<, =======, >>>>>>>)**.
 
+3. Marcamos el conflicto como resuelto, hacemos un git add del archivo que tenia conflictos.
 
+    ```
+    git add nombre_del_archivo_con_conflicto
+    ```
+4. Como ultimo paso realizamos un commit.
+
+    ```
+    git commit -m "Conflicto resuelto"
+    ```
+
+Con estos pasos finalizamos el proceso y el conflicto queda resuelto ✨
 
 
