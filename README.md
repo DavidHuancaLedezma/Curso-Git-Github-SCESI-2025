@@ -413,7 +413,7 @@ el parámetro -D.
 
 Con eso borramos la rama que no fue fusionada previamente 💯
 
-### Conclictos en Git 💥
+### Conflictos en Git 💥
 
 Un conflicto es una situación en la que Git no es capaz de determinar qué cambio es el que tiene que prevalecer una vez ocurra la fusión y, por lo tanto, requiere que el usuario lo resuelva.
 
@@ -448,4 +448,32 @@ Dada la naturaleza de sistema distribuido, es normal que a veces ocurran conflic
 
 Con estos pasos finalizamos el proceso y el conflicto queda resuelto ✨
 
+## Github, push pull y pull-request
+
+![git](img/github.jpg)
+
+### ¿Para que se usa github? 🐙
+
+Github generalmente es utilizado con los siguientes finalidades:
+
+* 📁 Guardar código en la nube.
+
+* 👥 Colaborar en equipo.
+
+* 🕒 Llevar el historial de cambios.
+
+* 🐛 Reportar y solucionar errores (issues).
+
+* 🚀 Desplegar y mantener proyectos open source o privados.
+
+### ¿Github y git son lo mismo?
+
+No, github y git son totalmente diferentes.
+
+* **Github es un servicio de alojamiento en la nube** de codigo fuente basado en el sistema de control de versiones que ofrece git, tambien tenemos otros servicios de alojamiento como **GitLab** y **Bitbucket**.
+
+
+* **Git** por otro lado es un **sistema de control de versiones**.
+
+![git](img/diferencia_git_github.png)
 
