@@ -535,7 +535,7 @@ Ahora veremos paso a paso como enlazar nuestro repositorio remoto con el reposit
     Listo, con todo eso terminamos de Sincronizar nuestro repositorio remoto con el local. 🥳
     
 
-* 📌**Nota:** Al enlazamos el repositorio con **git remote add origin**, no es obligatorio colocar el origin, puede ser otra palabra el origin es simplemente una convención que se coloca normalmente.
+* 📌**Nota:** Cuando enlazamos el repositorio con **git remote add origin**, no es obligatorio colocar el origin, puede ser otra palabra el origin es simplemente una convención que se coloca normalmente.
 
 **Usando clone en git** 🧬
 
@@ -674,5 +674,42 @@ Al revisar una PR, es importante seguir los siguientes aspectos clave.
 
 3. 🧯 **Piensa en el impacto a largo plazo:** Este cambio puede romper algo en el futuro?
 
+## Flujos de trabajo y estrategias de ramas en Git
 
+Las cuatro estrategias más famosas que se pueden seguir a la hora de trabajar en equipo son **Git Flow**, **GitHub Flow**, **Trunk Based Development** y la estrategia más moderna, llamada **Ship / Show / Ask**.
 
+📌 **Nota:** Usar una buena estrategia en un proyecto puede determinar la velocidad, o incluso el éxito, de los desarrollos del equipo.
+
+### Git Flow 🚀
+
+Una de las estrategias más famosas a la hora de trabajar en equipo es Git Flow. Fue ideada por el desarrollador de Vincent Driessen en el año 2010, pero es uno de los flujos de trabajo mas antiguo que contiene las siguientes ramas:
+
+* 🌳 **main:** Su propósito es contener el código que se encuentra en producción.
+
+* 🧑‍💻 **develop:** Contiene el código en desarrollo pre-producción.
+
+* 🌿 **feature/nombre:** Cuando trabajas en una nueva característica para el proyecto.
+
+* 🔥 **hotfix/nombre:** Correcciones urgentes sobre main.
+
+* 🔍 **release/nombre-versión:** Aquí preparas el lanzamiento de una nueva versión.
+
+![git](img/gitflow.png)
+
+En la siguiente imagen se presentan todas las ramas necesarias para poder seguir la estrategia.
+
+**Funcionamiento del flujo de trabajo** 💼
+
+El flujo de trabajo consiste en:
+
+1. Crear una rama develop a partir de la rama main.
+
+2. Crear una rama feature a partir de develop para desarrollar una nueva funcionalidad.
+
+3. Una vez finalizada la funcionalidad de feature se realiza una integración con develop.
+
+4. Al finalizar el develop, se crea una rama release desde develop para pruebas finales y preparar el lanzamiento de una nueva versión.
+
+5. Al terminar en el release se hace una integración a main para sacar una versión terminada del software.
+
+6. Las ramas hotfix se crean desde el main para arreglar bugs en producción y al terminarse, se integran a main con una nueva versión del software.
