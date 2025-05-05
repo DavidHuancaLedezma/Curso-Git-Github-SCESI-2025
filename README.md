@@ -569,6 +569,7 @@ Si una rama se elimina en el servidor, Git no borra automáticamente la referenc
     ```
 
 **Comandos con force ⚠️**
+
 Podemos forzar el comando push pero esto trae consecuencias.
 
 1. ☠️ En el caso de git push al forzar la actualización del repositorio elimina los commits remotos que no esten en tu version local 
@@ -580,6 +581,7 @@ Podemos forzar el comando push pero esto trae consecuencias.
     ```
 
 **Uso de --set-upstream**
+
 Con el --set-upstream asociamos una rama remota con la local para luego escribir simplemente git push en lugar de git push origin main por ejemplo:
 
 * ⏮️ Antes teniamos que colocar todo el comando.
@@ -603,6 +605,7 @@ Con el --set-upstream asociamos una rama remota con la local para luego escribir
     ```
 
 **Uso de --all 🎯** 
+
 Si queremos subir todas las ramas locales a las remotas podemos hacerlo con --all, por ejemplo:
 
 * Supongamos que tenemos las sigientes ramas.
@@ -626,3 +629,50 @@ Si queremos subir todas las ramas locales a las remotas podemos hacerlo con --al
     git push origin dev
     git push origin hotfix
     ```
+
+### ¿Que es una pull request? 🤔
+
+Pull request o tambien dicho como PR es una petición de cambios supervisado que se realiza desde Github, en pocas palabras otra persona tiene que revisar y aprobar los cambios que estas intentando hacer a una rama desde otra.
+
+![git](img/pull-request.jpeg)
+
+### Proceso para hacer una pull request
+
+Para hacer una pull request tenemos que entrar a Github, al apartado de pull request de nuestro respectivo repositorio y seguir los siguientes pasos:
+
+* **Paso 1:** Creamos una nueva pull request.
+
+![git](img/creacion_PR.png)
+
+* **Paso 2:** Seleccionamos como rama base a la rama que se fusionara los cambios entrantes de la rama que escogimos como compare.
+
+![git](img/PR_ramas.png)
+
+* **Paso 3:** Agregamos un título, comentario y quien revisara la PR, posteriormente creamos la PR y esperamos su revisión. 
+
+![git](img/PR_titulo.png)
+
+* **Paso 4:** La PR estara ya creada y esperando su revisión por el usuario que asignamos.
+
+![git](img/pr_creada.png) 
+
+* **Paso 5:** Una vez aceptada la PR procedemos a realizar la unión de las ramas correspondiente.
+
+### Hacer una buena PR
+
+1. 🧑‍💻 **Enfoca tu codigo en una sola cosa:** Hay que realizar una funcionalidad pequeña para que la persona que revise la PR pueda enterder nuestro codigo pequeño y puntual.
+
+2. 📚 **Explica tu pull request:** Hay que explicar la PR por medio de los comentarios que nos proporsiona Github y adjuntar imagenes para que facilite a la persona que esta revisando la PR.
+
+### Revisar una PR
+
+Al revisar una PR, es importante seguir los siguientes aspectos clave.
+
+1. 💬 **Proporcionar feedback:** Siempre brindar recomendaciones positivas, en el caso de encontrar errores.
+
+2. 🧠 **Entiende el contexto:** Comprende qué problema resuelve y por qué se hicieron los cambios.
+
+3. 🧯 **Piensa en el impacto a largo plazo:** Este cambio puede romper algo en el futuro?
+
+
+
