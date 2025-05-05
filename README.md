@@ -454,11 +454,11 @@ Con estos pasos finalizamos el proceso y el conflicto queda resuelto ✨
 
 ### ¿Para que se usa github? 🐙
 
-Github generalmente es utilizado con los siguientes finalidades:
+Github generalmente es utilizado con las siguientes finalidades:
 
 * 📁 Guardar código en la nube.
 
-* 👥 Colaborar en equipo.
+* 👥 Colaborar en git clone https://repositorio_objetivoequipo.
 
 * 🕒 Llevar el historial de cambios.
 
@@ -466,9 +466,9 @@ Github generalmente es utilizado con los siguientes finalidades:
 
 * 🚀 Desplegar y mantener proyectos open source o privados.
 
-### ¿Github y git son lo mismo?
+### ¿Github y git son lo mismo? 🤔
 
-No, github y git son totalmente diferentes.
+No, Github y Git son totalmente diferentes.
 
 * **Github es un servicio de alojamiento en la nube** de codigo fuente basado en el sistema de control de versiones que ofrece git, tambien tenemos otros servicios de alojamiento como **GitLab** y **Bitbucket**.
 
@@ -477,3 +477,152 @@ No, github y git son totalmente diferentes.
 
 ![git](img/diferencia_git_github.png)
 
+### Repositorios remotos 🌐
+
+Los repositorios remotos son repositorios que están hospedados en un servidor y que servirá de punto de sincronización entre diferentes repositorios locales.
+
+![git](img/repositorio_remoto.png)
+
+Los repositorios remotos no están en nuestra máquina. Están hospedados en un servidor externo pero podremos sincronizar nuestros cambios cuando queramos.
+
+### Enlazar un repositorio remoto con un repositorio local 🌐 💻
+
+Ahora veremos paso a paso como enlazar nuestro repositorio remoto con el repositorio local.
+
+* **Paso 1:** Nos dirigimos a Gihub, entramos a la sección de repositorios y creamos un nuevo repositorio.
+
+![git](img/creando_repositorio.png)
+
+* **Paso 2:** Asignamos el nombre a nuestro repositorio y lo colocamos en publico si queremos que sea visible para otros usuarios, caso contrario en privado.
+
+![git](img/nombre_repositorio.png)
+
+* **Paso 3:** Deslizamos abajo y presionamos el boton create repository, con eso ya tenemos creado nuestro repositorio en Github.
+
+![git](img/boton_crear_repositorio.png)
+
+* **Paso 4:** Copiamos el link de nuestro repositorio de Github.
+
+![git](img/copiar_link.png)
+
+* **Paso 5:** Enlazamos el repositorio remoto con el local desde nuestra consola.
+
+    ```
+    git remote add origin https://github.com/DavidHuancaLedezma/primer_repositorio.git
+    git push -u origin main
+    ```
+* **Paso 6:** Verificamos que se enlazara correctamente. 
+
+    ```
+    git remote -v
+    ```
+    Esto nos mostrara algo así
+    ```
+    origin  https://github.com/DavidHuancaLedezma/primer_repositorio.git (fetch)
+    origin  https://github.com/DavidHuancaLedezma/primer_repositorio.git (push)
+    ```
+* **Paso 7:** Cambiamos el nombre de la rama master a main.
+
+     ```
+    git branch -M main
+    ```
+* **Paso 8:** Enviamos nuestros commits al repositorio remoto y a la rama main.
+
+    ```
+    git push -u origin main
+    ```
+
+    Listo, con todo eso terminamos de Sincronizar nuestro repositorio remoto con el local. 🥳
+    
+
+* 📌**Nota:** Al enlazamos el repositorio con **git remote add origin**, no es obligatorio colocar el origin, puede ser otra palabra el origin es simplemente una convención que se coloca normalmente.
+
+**Usando clone en git** 🧬
+
+* Para clonar un repositorio de Github unicamente utilizamos el git clone, esto nos permite tener el repositorio en nuestro entorno local y modificarlo a nuestro gusto pero no podemos subir esos cambios al repositorio del cual clonamos este, a menos que seamos colaboradores. 👀
+    ```
+    git clone https://repositorio_objetivo
+    ```
+**Eliminando ramas del repositorio local que ya no existen**
+
+Si una rama se elimina en el servidor, Git no borra automáticamente la referencia local, git remote prune origin nos sirve para eso:
+
+* 🗑️ Borra esas referencias obsoletas en nuestro repositorio local.
+
+* 🌿 No afecta a ramas locales ni al servidor remoto.
+
+* 🧹 Solo "limpia" lo que ya no existe en el origin.
+
+    ```
+    git remote prune origin
+    ```
+
+### ¿Cual es la diferencia entre git push y git pull? 🤔
+
+* 📤 **git push:** Se utiliza para subir nuestros cambios de nuestro repositorio local al remoto.
+    ```
+    git push
+    ```
+* 📥 **git pull:** Baja las actualizaciones que hay en el repositorio remoto a nuestro repositorio local. 
+    ```
+    git pull
+    ```
+
+**Comandos con force ⚠️**
+Podemos forzar el comando push pero esto trae consecuencias.
+
+1. ☠️ En el caso de git push al forzar la actualización del repositorio elimina los commits remotos que no esten en tu version local 
+
+2. ☠️ Es destructivo si alguien más está trabajando en la misma rama.
+
+    ```
+    git push -f
+    ```
+
+**Uso de --set-upstream**
+Con el --set-upstream asociamos una rama remota con la local para luego escribir simplemente git push en lugar de git push origin main por ejemplo:
+
+* ⏮️ Antes teniamos que colocar todo el comando.
+
+    ```
+    git push origin main
+    git pull origin main
+    ```
+
+* ⚙️ Configurando --set-upstream.
+
+    ```
+    git push origin --set-upstream main
+    git pull origin --set-upstream main
+    ```
+* 🙀 Despues unicamente tenemos que colocar la versión resumida.
+
+    ```
+    git push 
+    git pull
+    ```
+
+**Uso de --all 🎯** 
+Si queremos subir todas las ramas locales a las remotas podemos hacerlo con --all, por ejemplo:
+
+* Supongamos que tenemos las sigientes ramas.
+
+    ```
+    main
+    dev
+    hotfix
+    ```
+
+* Al ejecutar git push --all es como si subieramos todo
+    
+    ```
+    git push --all
+    ```
+
+* Git lo interpretaria como subir todas las ramas.
+
+    ```
+    git push origin main
+    git push origin dev
+    git push origin hotfix
+    ```
