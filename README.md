@@ -770,3 +770,34 @@ Los cambios que creamos en el repositorio se categorizan en tres:
 
 5. 🤝 El equipo ha sabido lidiar con el ego individual, las personas confían en el resto del equipo y las pruebas automáticas pasan.
 
+## Buenas prácticas en git
+
+Las buenas practicas son un estándar manejado en la mayoría de equipos de desarrollo, ayuda a resolver conflictos o problemas durante el desarrollo con más facilidad.
+
+### Frecuencias para escribir commits
+
+ **¿Cada cuánto debería hacer un commit?** 🤔
+
+**A menudo** hay que hacer commits con las siguientes recomentaciones:
+
+* Es mejor hacer commits pequeños con pequeñas mejoras que un commit con todo lo que se quiere hacer.
+
+* Divide la tarea en trozos pequeños. Cada
+trozo es un commit.
+
+
+Hacer commit a menudo no significa que debas hacer commits sin sentido. Graba tus progresos en iteraciones pequeñas pero que tengan un significado.
+
+### Escribir buenos commits
+
+Para escribir buenos commits usamos el verbo imperativo add, change, fix, remove al inicio de cada commit.
+
+* **Add:** Agregando una nueva funcionalidad.
+
+* **Change:** Modificando una funcionalidad existente.
+
+* **Fix:** Corrigiendo un error o bug.
+
+* **Remove:** Eliminando código, archivos o funcionalidades.
+
+
