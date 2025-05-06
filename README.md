@@ -713,3 +713,60 @@ El flujo de trabajo consiste en:
 5. Al terminar en el release se hace una integración a main para sacar una versión terminada del software.
 
 6. Las ramas hotfix se crean desde el main para arreglar bugs en producción y al terminarse, se integran a main con una nueva versión del software.
+
+### Github Flow 🐙
+
+**GitHub Flow** es una estrategia creada por la propia **GitHub** y pensada especialmente para equipos y proyectos que hacen despliegues de forma regular. Se basa en la creación de Pull Requests que serán discutidas para que se integren en la rama principal.
+
+![git](img/gtihub_flow.jpg)
+
+GitHub Flow es una alternativa más simple de Git Flow. Tiene menos liturgias, es más fácil de entender y favorece los despliegues continuos de tu proyecto.
+
+GitHub Flow tiene dos tipos de ramas:
+
+* 🌳 **main:** La rama principal que contiene los cambios que se despliegan regularmente.
+
+* 🌿 Cualquier otra rama que quiere ser integrada en la rama principal.
+
+### Trunk Based Development 🌳
+
+El Trunk Based Development es una estrategia que se basa en que el mayor tiempo de desarrollo se concentra en una sola rama llamada trunk que corresponde a la main. 
+
+![git](img/trunk.webp)
+
+En esta estrategia se prioriza hacer commits directamente a la rama principal. En el caso de necesitar ramas, se hacen Pull Request pequeñas y que duren poco tiempo para ser integradas lo antes posible.
+
+**Beneficios de Trunk Based Development**
+
+* 🔁 Integración continua y menos fricción.
+
+* 👷 Menos trabajo manual.
+
+* 🚀 Despliegue a producción continuo.
+
+### Ship / Show / Ask 🍨
+
+Ship / Show / Ask es una estrategia de ramas que combina la idea de crear Pull Request con la habilidad de seguir publicando cambios rápidamente.
+
+![git](img/ship-show-ask.png)
+
+Los cambios que creamos en el repositorio se categorizan en tres:
+
+1. ⚡ Ship: Se fusiona en la rama principal sin revisión.
+
+2. 🔍 Show: Abre una petición de cambios para que sean revisados por CI pero se fusiona inmediatamente.
+
+3. ❓ Ask: Abre una PR para discutir los cambios antes de fusionarlos
+
+**Las reglas de Ship / Show / Ask**
+
+1. 🚀 Tenemos un buen sistema de CI/CD, fiable y rápido, que hace que la rama principal siempre sea desplegable
+
+2. 👥 Confiamos en el equipo y existen buenas prácticas de desarrollo.
+
+3. 🧑‍💻 Las revisiones de código no son requerimientos para que las PRs sean fusionadas.
+
+4. 🌿 Las ramas tienen un tiempo de vida corto.
+
+5. 🤝 El equipo ha sabido lidiar con el ego individual, las personas confían en el resto del equipo y las pruebas automáticas pasan.
+
