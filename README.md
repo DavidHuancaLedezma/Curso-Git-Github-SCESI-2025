@@ -822,7 +822,7 @@ Usa como máximo **50 caracteres para tu mensaje de commit**, sé corto y concis
 
 * El commit tiene que estar escrito todo con letra minuscula.
 
-### Prefijos para escribir commits
+### Prefijos para escribir commits ✏️
 
 Utilizamos prefijos para que los commits sean más semánticos, cuando un proyecto crece, es necesario que existan ciertas reglas para que el historial sea legible, a continuación veremos la lista de los prefijos utilizados:
 
@@ -844,3 +844,35 @@ Utilizamos prefijos para que los commits sean más semánticos, cuando un proyec
 
 9. **test:** para tests o refactorización de uno ya existente.
 
+### Escribe un buen nombre de rama ✏️
+
+Al nombrar las ramas tenemos que seguir el mismo patron, si elegimos que todas las ramas se escriban en mayusculas entonces debemos hacer eso para todas, a plicamos la misma logica si queremos escribirlas con minisculas.
+
+En las ramas debemos espesificar que tipo de acción realizara como por ejemplo:
+
+* 🐞 **bug:** Cambios de código para arreglar un bug conocido.
+
+* ✨ **feature:** Desarrollo de una nueva característica.
+
+* 🔬 **experiment:** Experimentos que nunca serán fusionados.
+
+* 🔥 **hotfix:** Cambio rápido de un error crítico.
+
+**📌 Nota:** No necesariamente tiene que estar escrito en ingles las ramas, en el caso que el equipo de desarrollo sean hispanohablantes se pueden nombrar en español las ramas.
+
+
+**IDs de JIRA** 🆔
+
+Aunque la convención anterior es una buena forma de identificar de qué tipo de rama se trata, es muy importante que el nombre de la rama sea único.
+
+El nombre de la rama a veces no da el suficiente contexto
+para saber realmente en qué trabaja o qué soluciona. Para ello, una buena idea es adjuntar al principio del nombre de la rama la ID del ticket.
+
+* Por ejemplo:
+    ```
+    989-hotfix/fix-typo-in-name
+    1110-feature/add-new-user-form
+    1240-experiment/try-new-ui-design
+    1255-hotfix/fix-typo-in-name
+    ```
+Ahora es mucho más fácil buscar más contexto sobre estas ramas, pese a que no quede claro con su propio nombre. 💯
