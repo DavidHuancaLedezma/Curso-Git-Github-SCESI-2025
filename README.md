@@ -7,9 +7,7 @@
 *¡Gracias por entrar a mi curso de Git! Como regalo de bienvenida, te dejo un conjunto de comandos Git esenciales para que empieces con el pie derecho.*
 *Me despido con mi frase favorita **si puedes imaginarlo pudes programarlo**.✨*
 
-* *Abrir regalo* 👉[https://academia-x.netlify.app/cheatsheets/git.html](https://academia-x.netlify.app/cheatsheets/git.html)
-
-
+* 🎁 *Abrir regalo* 👉[https://academia-x.netlify.app/cheatsheets/git.html](https://academia-x.netlify.app/cheatsheets/git.html)
 
 
  ## 📋 Índice
@@ -278,7 +276,20 @@ El comando git add en Git se usa para agregar archivos al área de preparación.
 Una rama es simplemente una versión de la colección de directorios y archivos del repositorio. Cada vez que se crea una nueva rama, **se crea una copia de la colección de archivos actual**.
 A su vez, a **partir de esta rama puedes crear más ramas**.
 
-![git](img/ramas.png)
+```mermaid
+graph LR
+
+Cración-del-proyecto -- Rama main --> B(( ))
+B(( ))-- Rama A --> G(( ))
+G(( )) --> H(( ))
+H(( )) --> K(( ))
+B(( )) --> C(( ))
+C(( )) --> D(( ))
+D(( )) --> E(( ))
+E(( )) --> S(( ))
+B(( )) -- Rama B--> Z(( ))
+```
+
 
 ### ¿Para que sirven las ramas? 🤔
 
