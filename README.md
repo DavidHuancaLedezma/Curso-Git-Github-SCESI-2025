@@ -932,3 +932,36 @@ El git checkout no es destructivo por sí solo, pero puede causar pérdida de ca
 
 
 **📌 NOTA:** En el HEAD N reemplazamos el número de pasos para volver al commit que queremos, mientras que en SHA utlilizamos el id del commit al cual queremos volver.
+
+
+## Hooks, Alias y Trucos Git
+
+### Hooks 
+
+Un hook, o punto de enganche, es la posibilidad de ejecutar una acción o script cada vez que ocurre un evento determinado de git, tenemos hooks del lado del cliente y del servidor.
+
+**Hooks del lado del cliente**
+
+Sólo afectan al repositorio local que los contiene.
+
+* **pre-commit:** Podrías comprobar si se está intentando hacer un commit de demasiados archivos.
+
+* **prepare-commit-msg:** Para modificar el mensaje del commit o añadir cualquier información extra.
+
+* **commit-msg:** Es el sitio perfecto para hacer todas las comprobaciones pertinentes al mensaje.
+
+* **post-commit:** Su uso principal es la de notificar por Slack.
+
+* **pre-push:** Para ejecutar una batería de tests.
+
+* **post-checkout y post-merge:** Permite limpiar el directorio de trabajo, tras realizar un checkout, o el de limpiar las ramas que ya no se usan tras realizar un merge.
+
+**Hooks del lado del servidor:** 
+
+En el lado del servidor, en el repositorio remoto, tenemos tres puntos de enganche:
+
+* **pre-receive:** Para comprobar que los commits que se quieren guardar están bien formados.
+
+* **update:** Puedes evitar de una forma granular cada actualización.
+
+* **post-receive:** Enviar un correo a todos los usuarios del repositorio que se han grabado nuevos cambios en el repositorio remoto.
