@@ -936,11 +936,11 @@ El git checkout no es destructivo por sí solo, pero puede causar pérdida de ca
 
 ## Hooks, Alias y Trucos Git
 
-### Hooks 
+### Hooks ⭐
 
 Un hook, o punto de enganche, es la posibilidad de ejecutar una acción o script cada vez que ocurre un evento determinado de git, tenemos hooks del lado del cliente y del servidor.
 
-**Hooks del lado del cliente**
+**Hooks del lado del cliente** 👤
 
 Sólo afectan al repositorio local que los contiene.
 
@@ -956,7 +956,7 @@ Sólo afectan al repositorio local que los contiene.
 
 * **post-checkout y post-merge:** Permite limpiar el directorio de trabajo, tras realizar un checkout, o el de limpiar las ramas que ya no se usan tras realizar un merge.
 
-**Hooks del lado del servidor:** 
+**Hooks del lado del servidor:** 🗄️
 
 En el lado del servidor, en el repositorio remoto, tenemos tres puntos de enganche:
 
@@ -965,3 +965,62 @@ En el lado del servidor, en el repositorio remoto, tenemos tres puntos de enganc
 * **update:** Puedes evitar de una forma granular cada actualización.
 
 * **post-receive:** Enviar un correo a todos los usuarios del repositorio que se han grabado nuevos cambios en el repositorio remoto.
+
+
+**Creando un hook** ⚡
+
+Para crear un propio hook sólo tienes que crear un archivo nombre-del-hook en la carpeta .git/hooks y en él poner el código que quieras que se ejecute.
+
+### Alias 🎯
+
+Los alias pueden ser sencillos atajos para comandos que pueden ser usados en lugar de los nombres completos.
+
+![git](img/alias.png)
+
+
+Git te permite crear tus propios alias fácilmente para comandos que usas habitualmente en tu proyecto con este sistema de control de versiones.
+
+* Para crear tu propio comando debes usar el comando git config y ponerlo de la siguiente manera:
+
+    ```
+    git config --global alias.[nombre-del-alias] "comando a ejecutar"
+    ```
+
+### Trucos en git 🪄
+
+1. 💾 Guarda tus cambios temporalmente.
+
+    ```
+    git stash
+    git stash -u
+    git stash pop
+    ```
+
+2. 🔁 Aplicar cambios de commits en específico.
+
+    ```
+    git cherry-pick <SHA>
+    ```
+
+3. 🐞 Detectar qué commit es el que ha introducido un bug.
+
+    ```
+    git bisect
+    git bisect start
+    git bisect bad
+    git bisect good
+    git bisect reset
+    ```
+
+4. 🔁 Cambiar el nombre de un commit.
+
+    ```
+    git commit --amend -m <descripcion commit>
+    ```
+5. 🌿 Recupera un archivo en concreto de otra rama o commit.
+
+    ```
+    git checkout <SHA> <archivo>
+    ```
+
+![git](img/gracias.gif)
