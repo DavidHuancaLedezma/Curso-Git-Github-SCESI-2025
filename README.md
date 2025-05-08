@@ -876,3 +876,59 @@ para saber realmente en qué trabaja o qué soluciona. Para ello, una buena idea
     1255-hotfix/fix-typo-in-name
     ```
 Ahora es mucho más fácil buscar más contexto sobre estas ramas, pese a que no quede claro con su propio nombre. 💯
+
+## Deshacer cambios
+
+Tenemos algunos casos en los cuales debemos deshacer cambios, entre ellos estan los siguientes casos:
+
+* Dejó de funcionar el proyecto.
+
+* Queremos recuperar una parte del código que eliminamos.
+
+* Queremos recuperar archivos que eliminamos.
+
+### Comandos destructivos y no destructivos 💣
+
+Los comandos destructivos afectan el historial de commits realizados mientras que los no destructivos unicamente trabajan en base al historial sin afectarlo.
+
+**Comandos no destructivos** 😊
+
+Entre los comandos no destructuvos tenemos el reset para eliminar el commit el cual posee 2 opciones:
+
+* **soft:** Mantiene los cambios que ocurrieron antes de hacer commit desde donde apuntaba.
+
+    ```
+    git reset --soft HEAD~<N>
+    git reset --soft <SHA>
+    ```
+
+* **hard:** Descarta los cambios y el commit.
+
+    ```
+    git reset --hard HEAD~<N>
+    git reset --hard <SHA>
+    ```
+
+**Comandos destructivos** ☠️
+
+Entre los comandos destructuvos tenemos el revert:
+
+* **revert:** revierte los cambios que un commit introdujo, y crea un nuevo commit con los cambios revertidos.
+
+    ```
+    git revert HEAD~<N>
+    git revert <SHA>
+    ```
+
+**Otros comandos** 🎯
+
+El git checkout no es destructivo por sí solo, pero puede causar pérdida de cambios no guardados si no tenemos cuidado.
+
+* **git checkout:** Nos permite recuperar código específico de commits.
+
+    ```
+    git checkout <SHA>
+    ```
+
+
+**📌 NOTA:** En el HEAD N reemplazamos el número de pasos para volver al commit que queremos, mientras que en SHA utlilizamos el id del commit al cual queremos volver.
