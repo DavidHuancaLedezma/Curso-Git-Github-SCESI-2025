@@ -4,10 +4,14 @@
 📝 Este documento contiene mis notas personales sobre el curso de git y github para las configuraciones iniciales de git como los comandos que se utilizan para trabajar con proyectos de software, del mismo modo revisaremos las mejores practicas que se utilizan en git.
 
  ## 📋 Índice
-> 1. [**Introducción a Git** 🚀](#introducción-a-git)
-> 2. [**States y commits** 🚀](#states-y-commits)
-
-
+> 1. [🚀 **Introducción a Git** ](#introducción-a-git)
+> 2. [✏️ **States y commits**](#states-y-commits)
+> 3. [🌳 **Ramas, merge y conflictos**](#ramas-merge-y-conflictos)
+> 4. [🐙 **Github, push pull y pull-request**](#github-push-pull-y-pull-request)
+> 5. [🧩 **Flujos de trabajo y estrategias de ramas en Git**](#flujos-de-trabajo-y-estrategias-de-ramas-en-git)
+> 6. [⭐ **Buenas prácticas en git**](#buenas-prácticas-en-git)
+> 7. [↩️ **Deshacer cambios**](#deshacer-cambios)
+> 8. [🎯 **Hooks, Alias y Trucos Git**](#hooks-alias-y-trucos-git)
 
 ## Introducción a Git
 
