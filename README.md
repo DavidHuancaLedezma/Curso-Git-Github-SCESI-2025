@@ -376,7 +376,31 @@ Esto nos dira en que rama estamos actualmente, en mi caso es la main 🌿
     ```
 Listo, si ahora ejecutamos un git log veremos que el último commit incluye la palabra Merge, este commit justamente incluye todos los cambios que se habían realizado en la rama my-branch.
 
-![git](img/merge.png)
+
+
+```mermaid
+graph LR
+Creación-del-proyecto -- Rama main --> A(( ))
+A(( )) --> B(( ))
+
+B(( )) --Rama A--> G(( ))
+G(( )) --> H(( ))
+H(( )) -.Merge a main.-> Z(( ))
+
+B(( )) --> W(( ))
+W(( )) --> I(( ))
+I(( )) --> O(( ))
+O(( )) --> Z(( ))
+
+B(( )) --Rama B--> C(( ))
+C(( )) --Rama C--> D(( ))
+C(( )) --Rama D--> J(( ))
+
+J(( )) --> L(( ))
+L(( )) -.Merge a main.-> Z(( ))
+D(( )) --> E(( ))
+E(( )) --> F(( ))
+```
 
 Al ejecutar el comando git merge, se crea un nuevo commit que incluye todos los cambios de la rama de origen a la rama en la que nos encontramos ahora.
 
