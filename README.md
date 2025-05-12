@@ -5,7 +5,7 @@
 
 ## 🎁 *Regalo de bienvenida* 🎁
 *¡Gracias por entrar a mi curso de Git! Como regalo de bienvenida, te dejo un conjunto de comandos Git esenciales para que empieces con el pie derecho.*
-*Me despido con mi frase favorita **si puedes imaginarlo pudes programarlo**.✨*
+*Me despido con mi frase favorita **si puedes imaginarlo puedes programarlo**.✨*
 
 * 🎁 *Abrir regalo* 👉[https://academia-x.netlify.app/cheatsheets/git.html](https://academia-x.netlify.app/cheatsheets/git.html)
 
