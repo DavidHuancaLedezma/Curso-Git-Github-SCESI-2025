@@ -1054,4 +1054,4 @@ E(( )) --> F(( ))
     git checkout <SHA> <archivo>
     ```
 
-![git](img/gracias.gif)
+
